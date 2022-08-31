@@ -1,0 +1,67 @@
+.navbar {
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $dark;
+    background-color: $white;
+    transition: all 0.3s linear;
+    background-image: linear-gradient(to right,
+            $danger 60%,
+            rgba(255, 255, 255, 0) 0%);
+    background-position: bottom;
+    background-size: 1rem 1px;
+    background-repeat: repeat-x;
+
+    .container-fluid {
+        display: grid;
+        grid-template-columns: 10rem auto 40rem auto;
+
+        [class*="navbar-"] {
+            display: flex;
+            grid-gap: 1rem;
+            align-items: center;
+            font-size: 1.6rem;
+        }
+    }
+
+    &-menu {
+        a {
+            color: $dark;
+            font-weight: bold;
+            padding: 0rem 1rem;
+        }
+    }
+
+    &-buttons {
+        &-box {
+            width: 5rem;
+        }
+    }
+
+    &-search {
+        position: relative;
+
+        .fa-solid {
+            position: absolute;
+            right: 0.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 3rem;
+            width: 3rem;
+            border-radius: 100%;
+            background-color: $purple;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-control {
+            height: 4rem;
+            font-size: 1.4rem;
+            border-radius: 4rem;
+            border-color: $purple;
+        }
+    }
+}

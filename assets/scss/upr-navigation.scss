@@ -1,0 +1,58 @@
+.upr-navbar {
+    background-color: $purple;
+    color: $white;
+    font-size: 1.4rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    //Container
+    .container-fluid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    //   Left Area
+    &-left {
+        display: flex;
+        grid-gap: 1.5rem;
+
+        i {
+            font-size: 1.4rem;
+            margin-right: 0.5rem;
+        }
+    }
+
+    //   Center Area
+    &-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .badge {
+            background-color: $orange;
+            border-radius: 1rem;
+            margin-right: 0.5rem;
+        }
+
+        i {
+            margin-right: 0.5rem;
+        }
+    }
+
+    //   Right Area
+    &-right {
+        display: flex;
+        grid-gap: 1rem;
+        justify-content: flex-end;
+
+        .form-select {
+            background-color: transparent;
+            color: $white;
+            border-color: transparent;
+            width: 9rem;
+            font-size: 1.3rem;
+        }
+    }
+}

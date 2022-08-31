@@ -43,12 +43,32 @@
 </template>
 
 <script setup>
-const categories = await useFetch("http://3.111.70.214:1337/categories").data
-  ._rawValue;
-const occasions = await useFetch("http://3.111.70.214:1337/occasions").data
-  ._rawValue;
-const relations = await useFetch("http://3.111.70.214:1337/relations").data
-  ._rawValue;
+// const categories = await useFetch("http://3.111.70.214:1337/categories").data
+//   ._rawValue;
+// const occasions = await useFetch("http://3.111.70.214:1337/occasions").data
+//   ._rawValue;
+// const relations = await useFetch("http://3.111.70.214:1337/relations").data
+//   ._rawValue;
+const categories = ref([]);
+const occasions = ref([]);
+const relations = ref([]);
+
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/categories")
+    .then((res) => res.json())
+    .then((data) => (categories.value = data))
+    .catch((err) => console.log(err.message));
+
+  fetch("http://3.111.70.214:1337/occasions")
+    .then((res) => res.json())
+    .then((data) => (occasions.value = data))
+    .catch((err) => console.log(err.message));
+
+  fetch("http://3.111.70.214:1337/relations")
+    .then((res) => res.json())
+    .then((data) => (relations.value = data))
+    .catch((err) => console.log(err.message));
+});
 
 const props = defineProps({
   close: Boolean,

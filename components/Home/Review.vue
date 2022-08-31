@@ -4,23 +4,23 @@
       <h2>Cutomers Reviews</h2>
       <div class="review-list">
         <carousel :items-to-show="1">
-          <slide v-for="slide in 10" :key="slide">
+          <slide v-for="slide in reviews" :key="slide?.name">
             <div class="review-box">
               <div class="review-box-img">
                 <img
                   lazy="loading"
-                  src="http://demo2.themelexus.com/ziggy/wp-content/uploads/2022/05/avatar1.jpg"
+                  :src="`http://3.111.70.214:1337${slide?.image.url}`"
                   alt
                   class="img-fluid"
                 />
-                <h4>Title</h4>
-                <span>Tagline</span>
+                <h4>{{slide?.name}}</h4>
+                <span>{{slide?.location}}</span>
               </div>
               <div class="review-box-content">
                 <div class="review-box-content-rating">
                   <i v-for="n in 5" :key="`star-${n}`" class="fa-solid fa-star"></i>
                 </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab pariatur, aliquam molestias asperiores perspiciatis facilis exercitationem nihil praesentium. Ducimus, magni quae doloremque obcaecati dignissimos ut quaerat repellendus dolorem nobis blanditiis.</p>
+                <p>{{slide?.content}}</p>
               </div>
             </div>
           </slide>
@@ -34,6 +34,16 @@
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+
+// const reviews = await useFetch("http://3.111.70.214:1337/company-reviews").data
+//   ._rawValue;
+const reviews = ref([]);
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/company-reviews")
+    .then((res) => res.json())
+    .then((data) => (reviews.value = data))
+    .catch((err) => console.log(err.message));
+});
 </script>
 
 <style lang="scss">

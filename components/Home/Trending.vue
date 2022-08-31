@@ -9,43 +9,11 @@
         <div class="trending-list-box">Best Seller</div>
       </div>
       <div class="trending-content">
-        <div v-for="n in 8" :key="`card-${n}`" class="trending-card shadow">
-          <div class="trending-card-discount">25%</div>
-          <div class="trending-card-img">
-            <div class="trending-card-overlay">
-              <div class="trending-card-overlay-buttons">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <i class="fa-solid fa-heart"></i>
-              </div>
-              <div class="trending-card-overlay-book">
-                <nuxt-link to="/product" class="btn btn-primary">
-                  <i class="fa-solid fa-bag-shopping"></i> Book Now
-                </nuxt-link>
-              </div>
-            </div>
-            <img
-              lazy="loading"
-              src="http://demo2.themelexus.com/ziggy/wp-content/uploads/2022/05/product-19-1-350x350.jpg"
-              alt
-              class="img-fluid"
-            />
-          </div>
-          <div class="trending-card-content">
-            <h4>
-              2,500
-              <i class="fa-solid fa-indian-rupee-sign"></i>
-              <del>
-                3,200
-                <i class="fa-solid fa-indian-rupee-sign"></i>
-              </del>
-            </h4>
-            <p class="trending-card-content-title">Title</p>
-            <div class="trending-card-content-rating">
-              <i v-for="n in 5" :key="`star-${n}`" class="fa-solid fa-star"></i>
-              (5 Reviews)
-            </div>
-          </div>
-        </div>
+        <PartProductCart
+          v-for="product in products"
+          :key="`product-${product?.id}`"
+          :product="product"
+        />
       </div>
       <div class="trending-all-shop">
         <nuxt-link to="/">
@@ -56,6 +24,16 @@
     </div>
   </section>
 </template>
+
+<script setup>
+const products = ref([]);
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/products")
+    .then((res) => res.json())
+    .then((data) => (products.value = data))
+    .catch((err) => console.log(err.message));
+});
+</script>
 
 <style lang="scss">
 .trending {

@@ -25,9 +25,9 @@
 
       <!-- Product Container -->
       <PartProductContainer>
-        <PartProductCart v-for="n in 12" :key="`product-card-${n}`" />
+        <PartProductCart v-for="product in products" :key="product.title" :product="product" />
       </PartProductContainer>
-      <div class="pagination-section">
+      <div class="pagination-section" :class="[products?.count ? '' : 'd-none']">
         <div class="pagination-section-box">1</div>
         <div class="pagination-section-box">2</div>
         <div class="pagination-section-box">
@@ -39,7 +39,7 @@
       <div class="relatable-product">
         <h2>Top Rated Products</h2>
         <PartProductContainer>
-          <PartProductCart v-for="n in 4" :key="`reltable-product-card-${n}`" />
+          <PartProductCart v-for="product in products" :key="product.title" :product="product" />
         </PartProductContainer>
       </div>
     </div>
@@ -48,10 +48,19 @@
 
 <script setup>
 const filterClose = ref(false);
+const products = ref([]);
 
 function onFilterClick(value) {
   filterClose.value = value;
 }
+// const data = await useFetch("http://3.111.70.214:1337/products");
+// const products = data.data._rawValue;
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/products")
+    .then((res) => res.json())
+    .then((data) => (products.value = data))
+    .catch((err) => console.log(err.message));
+});
 </script>
 
 <style lang="scss">

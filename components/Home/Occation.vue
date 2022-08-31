@@ -35,9 +35,16 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
-const data = await useFetch("http://3.111.70.214:1337/occasions?featured=true");
-const occasions = data.data._rawValue;
-console.log(occasions);
+// const data = await useFetch("http://3.111.70.214:1337/occasions?featured=true");
+// const occasions = data.data._rawValue;
+
+const occasions = ref([]);
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/occasions?featured=true")
+    .then((res) => res.json())
+    .then((data) => (occasions.value = data))
+    .catch((err) => console.log(err.message));
+});
 </script>
 
 <style lang="scss">

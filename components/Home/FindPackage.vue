@@ -36,11 +36,26 @@
 </template>
 
 <script setup>
-const data = await useFetch("http://3.111.70.214:1337/occasions");
-const occasions = data.data._rawValue;
+// const data = await useFetch("http://3.111.70.214:1337/occasions");
+// const occasions = data.data._rawValue;
 
-const data1 = await useFetch("http://3.111.70.214:1337/relations");
-const relations = data1.data._rawValue;
+// const data1 = await useFetch("http://3.111.70.214:1337/relations");
+// const relations = data1.data._rawValue;
+
+const occasions = ref([]);
+const relations = ref([]);
+
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/occasions")
+    .then((res) => res.json())
+    .then((data) => (occasions.value = data))
+    .catch((err) => console.log(err.message));
+
+  fetch("http://3.111.70.214:1337/relations")
+    .then((res) => res.json())
+    .then((data) => (relations.value = data))
+    .catch((err) => console.log(err.message));
+});
 </script>
 
 <style lang="scss">

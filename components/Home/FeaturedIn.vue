@@ -4,10 +4,10 @@
       <div class="featured-in-list">
         <label for>Featured In</label>
         <carousel :items-to-show="6">
-          <slide v-for="slide in 10" :key="slide">
+          <slide v-for="slide in companies" :key="slide?.title">
             <img
               lazy="loading"
-              src="http://demo2.themelexus.com/ziggy/wp-content/uploads/2022/06/brand-3.svg"
+              :src="`http://3.111.70.214:1337${slide?.logo.url}`"
               alt
               class="img-fluid"
             />
@@ -22,6 +22,16 @@
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+// const companies = await useFetch("http://3.111.70.214:1337/companies").data
+//   ._rawValue;
+const companies = ref([]);
+
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/companies")
+    .then((res) => res.json())
+    .then((data) => (companies.value = data))
+    .catch((err) => console.log(err.message));
+});
 </script>
 
 <style lang="scss">

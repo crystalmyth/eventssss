@@ -2,7 +2,7 @@
   <section class="hero-section">
     <div class="container-fluid">
       <carousel :items-to-show="1">
-        <slide v-for="slide in carousels" :key="slide">
+        <slide v-for="slide in carousels" :key="slide.Title">
           <img
             lazy="loading"
             :src="`http://3.111.70.214:1337${slide.Banner.url}`"
@@ -25,8 +25,16 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
-const data = await useFetch("http://3.111.70.214:1337/carousels");
-const carousels = data.data._rawValue;
+// const data = await useFetch("http://3.111.70.214:1337/carousels");
+// const carousels = data.data._rawValue;
+
+const carousels = ref([]);
+onMounted(() => {
+  fetch("http://3.111.70.214:1337/carousels")
+    .then((res) => res.json())
+    .then((data) => (carousels.value = data))
+    .catch((err) => console.log(err.message));
+});
 </script>
 
 <style lang="scss">

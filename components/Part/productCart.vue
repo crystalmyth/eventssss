@@ -8,7 +8,7 @@
           <i class="fa-solid fa-heart"></i>
         </div>
         <div class="product-card-overlay-book">
-          <nuxt-link to="/product" class="btn btn-primary">
+          <nuxt-link :to="`/product/${product?.slug}`" class="btn btn-primary">
             <i class="fa-solid fa-bag-shopping"></i> Book Now
           </nuxt-link>
         </div>
@@ -39,8 +39,13 @@
 </template>
 
 <script setup>
-const product = await useFetch("http://3.111.70.214:1337/products/1").data
-  ._rawValue;
+const data = defineProps({
+  product: {
+    type: Object,
+    required: true,
+  },
+});
+const product = data.product;
 </script>
 
 <style lang="scss">
@@ -90,7 +95,7 @@ const product = await useFetch("http://3.111.70.214:1337/products/1").data
         align-items: center;
         justify-content: center;
         font-size: 2rem;
-        color: rgba($color: $dark, $alpha: 0.4);
+        color: rgba($color: $white, $alpha: 0.8);
       }
     }
 

@@ -3,26 +3,26 @@
     <PartDatePicker :show="false" />
     <div class="container-fluid">
       <PartBreadcrumb :breadcrumbs="['Home','Category','Product']" />
-
-      <div class="product-page-body">
+      <div class="product-page-body" v-if="selectedProduct">
         <div class="product-page-image">
           <img
-            src="http://demo2.themelexus.com/ziggy/wp-content/uploads/2022/05/product-19-1.jpg"
+            :src="`http://3.111.70.214:1337${selectedProduct[0].image.url}`"
             alt
             class="img-fluid"
           />
         </div>
         <div class="product-page-content">
           <label for>25%</label>
-          <h2 class="product-page-content-title">Title</h2>
+          <h2 class="product-page-content-title">{{selectedProduct[0].title}}</h2>
           <h4 class="product-page-content-price">
             <i class="fa-solid fa-indian-rupee-sign"></i> 2,500
             <del>
-              <i class="fa-solid fa-indian-rupee-sign"></i> 3,200
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              {{ selectedProduct[0].price }}
             </del>
           </h4>
           <PartProductCardRating :stars="5" :rating="2" />
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt adipisci necessitatibus esse architecto assumenda non vel? Quae tempora ea placeat, omnis recusandae sunt error voluptatem quam ex velit dolores expedita?</p>
+          <p>{{selectedProduct[0].content}}</p>
 
           <div class="product-page-content-buttons">
             <button class="btn btn-book">
@@ -50,8 +50,7 @@
         </div>
       </div>
     </div>
-
-    <div class="product-page-description">
+    <div class="product-page-description" v-if="selectedProduct">
       <div class="container-fluid">
         <div class="product-page-description-tabs">
           <div
@@ -73,17 +72,13 @@
         <div
           class="product-page-description-content"
           :class="[selectedTab == 'description' ? 'active' : '']"
-        >
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt necessitatibus soluta tempora eum delectus at incidunt odit maxime, explicabo ad eligendi fugiat asperiores quia adipisci architecto nisi, eveniet repellat temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minima deleniti. Sed ad quam, voluptates, temporibus quas dolores, quod accusamus mollitia ea itaque iure? Sint at quae excepturi cumque reprehenderit!</p>
-        </div>
+          v-html="selectedProduct[0].Description"
+        ></div>
         <div
           class="product-page-description-content"
           :class="[selectedTab == 'information' ? 'active' : '']"
-        >
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt necessitatibus soluta tempora eum delectus at incidunt odit maxime, explicabo ad eligendi fugiat asperiores quia adipisci architecto nisi, eveniet repellat temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minima deleniti. Sed ad quam, voluptates, temporibus quas dolores, quod accusamus mollitia ea itaque iure? Sint at quae excepturi cumque reprehenderit!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt necessitatibus soluta tempora eum delectus at incidunt odit maxime, explicabo ad eligendi fugiat asperiores quia adipisci architecto nisi, eveniet repellat temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minima deleniti. Sed ad quam, voluptates, temporibus quas dolores, quod accusamus mollitia ea itaque iure? Sint at quae excepturi cumque reprehenderit!</p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt necessitatibus soluta tempora eum delectus at incidunt odit maxime, explicabo ad eligendi fugiat asperiores quia adipisci architecto nisi, eveniet repellat temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minima deleniti. Sed ad quam, voluptates, temporibus quas dolores, quod accusamus mollitia ea itaque iure? Sint at quae excepturi cumque reprehenderit!</p>
-        </div>
+          v-html="selectedProduct[0].information"
+        ></div>
         <div
           class="product-page-description-content"
           :class="[selectedTab == 'review' ? 'active' : '']"
@@ -92,13 +87,16 @@
         </div>
       </div>
     </div>
-
     <div class="product-page-related-products">
       <div class="container-fluid">
         <h2>Related Products</h2>
 
         <PartProductContainer>
-          <PartProductCart v-for="n in 4" :key="`reltable-product-card-${n}`" />
+          <PartProductCart
+            v-for="product in products"
+            :key="`product-${product?.id}`"
+            :product="product"
+          />
         </PartProductContainer>
       </div>
     </div>
@@ -109,11 +107,27 @@
 import $ from "jquery";
 
 const selectedTab = ref("description");
+const products = ref([]);
+const selectedProduct = ref(null);
+const route = useRoute();
 
 function onTabClicked(index) {
   selectedTab.value = index;
 }
+
 onMounted(() => {
+  fetch("http://3.111.70.214:1337/products")
+    .then((res) => res.json())
+    .then((data) => (products.value = data))
+    .catch((err) => console.log(err.message));
+
+  fetch(`http://3.111.70.214:1337/products?slug=${route.params.id}`)
+    .then((res) => res.json())
+    .then((data) => (selectedProduct.value = data))
+    .catch((err) => console.log(err.message));
+
+  console.log(selectedProduct);
+
   $(".product-page-image").mouseenter(function () {
     $(".product-page-image .img-fluid").css({ transform: "scale(1.3)" });
   });

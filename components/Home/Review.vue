@@ -9,7 +9,7 @@
               <div class="review-box-img">
                 <img
                   lazy="loading"
-                  :src="`http://3.111.70.214:1337${slide?.image.url}`"
+                  :src="`${slide?.image.url}`"
                   alt
                   class="img-fluid"
                 />

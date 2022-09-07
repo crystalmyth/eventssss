@@ -5,11 +5,7 @@
       <PartBreadcrumb :breadcrumbs="['Home', 'Category', 'Product']" />
       <div class="product-page-body" v-if="selectedProduct">
         <div class="product-page-image">
-          <img
-            :src="`http://3.111.70.214:1337${selectedProduct[0].image.url}`"
-            alt
-            class="img-fluid"
-          />
+          <img :src="`${selectedProduct[0].image.url}`" alt class="img-fluid" />
         </div>
         <div class="product-page-content">
           <label for>25%</label>

@@ -7,7 +7,7 @@
           <slide v-for="slide in companies" :key="slide?.title">
             <img
               lazy="loading"
-              :src="`http://3.111.70.214:1337${slide?.logo.url}`"
+              :src="`${slide?.logo.url}`"
               alt
               class="img-fluid"
             />

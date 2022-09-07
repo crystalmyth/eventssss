@@ -5,7 +5,7 @@
         <slide v-for="slide in carousels" :key="slide.Title">
           <img
             lazy="loading"
-            :src="`http://3.111.70.214:1337${slide.Banner.url}`"
+            :src="`${slide.Banner.url}`"
             alt
             class="img-fluid"
           />

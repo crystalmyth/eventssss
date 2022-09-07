@@ -8,7 +8,7 @@
             <div class="occation-section-list-box shadow">
               <img
                 lazy="loading"
-                :src="`http://3.111.70.214:1337${slide.icon.url}`"
+                :src="`${slide.icon.url}`"
                 alt
                 class="img-fluid"
               />

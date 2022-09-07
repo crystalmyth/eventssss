@@ -15,7 +15,7 @@
       </div>
       <img
         lazy="loading"
-        :src="`http://3.111.70.214:1337${product?.image.url}`"
+        :src="`${product?.image.url}`"
         alt
         class="img-fluid"
       />
@@ -29,9 +29,13 @@
           <i class="fa-solid fa-indian-rupee-sign"></i>
         </del>
       </h4>
-      <p class="product-card-content-title">{{product?.title}}</p>
+      <p class="product-card-content-title">{{ product?.title }}</p>
       <div class="product-card-content-rating">
-        <i v-for="n in product?.rating" :key="`star-${n}`" class="fa-solid fa-star"></i>
+        <i
+          v-for="n in product?.rating"
+          :key="`star-${n}`"
+          class="fa-solid fa-star"
+        ></i>
         (5 Reviews)
       </div>
     </div>

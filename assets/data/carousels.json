@@ -1,0 +1,215 @@
+[
+  {
+    "id": 1,
+    "Title": "Carousel 1",
+    "published_at": "2022-08-31T05:42:22.987Z",
+    "created_at": "2022-08-31T05:42:20.517Z",
+    "updated_at": "2022-08-31T05:42:23.005Z",
+    "Banner": {
+      "id": 5,
+      "name": "1660379387_0.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 1583,
+      "height": 500,
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_1660379387_0.jpeg",
+          "hash": "thumbnail_1660379387_0_45f674a878",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 245,
+          "height": 77,
+          "size": 6.85,
+          "path": null,
+          "url": "/uploads/thumbnail_1660379387_0_45f674a878.jpeg"
+        },
+        "large": {
+          "name": "large_1660379387_0.jpeg",
+          "hash": "large_1660379387_0_45f674a878",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 1000,
+          "height": 316,
+          "size": 62.7,
+          "path": null,
+          "url": "/uploads/large_1660379387_0_45f674a878.jpeg"
+        },
+        "medium": {
+          "name": "medium_1660379387_0.jpeg",
+          "hash": "medium_1660379387_0_45f674a878",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 750,
+          "height": 237,
+          "size": 39.04,
+          "path": null,
+          "url": "/uploads/medium_1660379387_0_45f674a878.jpeg"
+        },
+        "small": {
+          "name": "small_1660379387_0.jpeg",
+          "hash": "small_1660379387_0_45f674a878",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 500,
+          "height": 158,
+          "size": 21.81,
+          "path": null,
+          "url": "/uploads/small_1660379387_0_45f674a878.jpeg"
+        }
+      },
+      "hash": "1660379387_0_45f674a878",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 102.64,
+      "url": "/uploads/1660379387_0_45f674a878.jpeg",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2022-08-31T05:42:04.934Z",
+      "updated_at": "2022-08-31T05:42:04.943Z"
+    }
+  },
+  {
+    "id": 2,
+    "Title": "Carousel 2",
+    "published_at": "2022-08-31T05:42:44.344Z",
+    "created_at": "2022-08-31T05:42:42.189Z",
+    "updated_at": "2022-08-31T05:42:44.361Z",
+    "Banner": {
+      "id": 4,
+      "name": "1654344959_0.jpeg",
+      "alternativeText": "",
+      "caption": "",
+      "width": 1583,
+      "height": 500,
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_1654344959_0.jpeg",
+          "hash": "thumbnail_1654344959_0_154705ec07",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 245,
+          "height": 77,
+          "size": 4.18,
+          "path": null,
+          "url": "/uploads/thumbnail_1654344959_0_154705ec07.jpeg"
+        },
+        "large": {
+          "name": "large_1654344959_0.jpeg",
+          "hash": "large_1654344959_0_154705ec07",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 1000,
+          "height": 316,
+          "size": 33.99,
+          "path": null,
+          "url": "/uploads/large_1654344959_0_154705ec07.jpeg"
+        },
+        "medium": {
+          "name": "medium_1654344959_0.jpeg",
+          "hash": "medium_1654344959_0_154705ec07",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 750,
+          "height": 237,
+          "size": 21.41,
+          "path": null,
+          "url": "/uploads/medium_1654344959_0_154705ec07.jpeg"
+        },
+        "small": {
+          "name": "small_1654344959_0.jpeg",
+          "hash": "small_1654344959_0_154705ec07",
+          "ext": ".jpeg",
+          "mime": "image/jpeg",
+          "width": 500,
+          "height": 158,
+          "size": 11.86,
+          "path": null,
+          "url": "/uploads/small_1654344959_0_154705ec07.jpeg"
+        }
+      },
+      "hash": "1654344959_0_154705ec07",
+      "ext": ".jpeg",
+      "mime": "image/jpeg",
+      "size": 67.37,
+      "url": "/uploads/1654344959_0_154705ec07.jpeg",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2022-08-31T05:42:04.900Z",
+      "updated_at": "2022-08-31T05:42:04.909Z"
+    }
+  },
+  {
+    "id": 3,
+    "Title": "Carousel 3",
+    "published_at": "2022-08-31T05:42:59.015Z",
+    "created_at": "2022-08-31T05:42:55.449Z",
+    "updated_at": "2022-08-31T05:42:59.031Z",
+    "Banner": {
+      "id": 3,
+      "name": "1645449113_1 (1).png",
+      "alternativeText": "",
+      "caption": "",
+      "width": 1583,
+      "height": 500,
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_1645449113_1 (1).png",
+          "hash": "thumbnail_1645449113_1_1_f8e3df9b74",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 245,
+          "height": 77,
+          "size": 15.8,
+          "path": null,
+          "url": "/uploads/thumbnail_1645449113_1_1_f8e3df9b74.png"
+        },
+        "large": {
+          "name": "large_1645449113_1 (1).png",
+          "hash": "large_1645449113_1_1_f8e3df9b74",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 1000,
+          "height": 316,
+          "size": 96.27,
+          "path": null,
+          "url": "/uploads/large_1645449113_1_1_f8e3df9b74.png"
+        },
+        "medium": {
+          "name": "medium_1645449113_1 (1).png",
+          "hash": "medium_1645449113_1_1_f8e3df9b74",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 750,
+          "height": 237,
+          "size": 66.54,
+          "path": null,
+          "url": "/uploads/medium_1645449113_1_1_f8e3df9b74.png"
+        },
+        "small": {
+          "name": "small_1645449113_1 (1).png",
+          "hash": "small_1645449113_1_1_f8e3df9b74",
+          "ext": ".png",
+          "mime": "image/png",
+          "width": 500,
+          "height": 158,
+          "size": 39.55,
+          "path": null,
+          "url": "/uploads/small_1645449113_1_1_f8e3df9b74.png"
+        }
+      },
+      "hash": "1645449113_1_1_f8e3df9b74",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 46.14,
+      "url": "/uploads/1645449113_1_1_f8e3df9b74.png",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2022-08-31T05:42:04.835Z",
+      "updated_at": "2022-08-31T05:42:04.867Z"
+    }
+  }
+]

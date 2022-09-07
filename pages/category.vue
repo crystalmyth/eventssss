@@ -5,7 +5,7 @@
       <PartProductFilter :close="filterClose" @close="onFilterClick" />
 
       <!-- Page Breadcrumb -->
-      <PartBreadcrumb :breadcrumbs="['Home','Category']" />
+      <PartBreadcrumb :breadcrumbs="['Home', 'Category']" />
 
       <!-- Page Sorting Filter -->
       <div class="filter-section">
@@ -25,9 +25,16 @@
 
       <!-- Product Container -->
       <PartProductContainer>
-        <PartProductCart v-for="product in products" :key="product.title" :product="product" />
+        <PartProductCart
+          v-for="product in products"
+          :key="product.title"
+          :product="product"
+        />
       </PartProductContainer>
-      <div class="pagination-section" :class="[products?.count ? '' : 'd-none']">
+      <div
+        class="pagination-section"
+        :class="[products?.count ? '' : 'd-none']"
+      >
         <div class="pagination-section-box">1</div>
         <div class="pagination-section-box">2</div>
         <div class="pagination-section-box">
@@ -39,7 +46,11 @@
       <div class="relatable-product">
         <h2>Top Rated Products</h2>
         <PartProductContainer>
-          <PartProductCart v-for="product in products" :key="product.title" :product="product" />
+          <PartProductCart
+            v-for="product in products"
+            :key="product.title"
+            :product="product"
+          />
         </PartProductContainer>
       </div>
     </div>
@@ -47,20 +58,21 @@
 </template>
 
 <script setup>
+import products from "~/assets/data/products";
 const filterClose = ref(false);
-const products = ref([]);
+// const products = ref([]);
 
 function onFilterClick(value) {
   filterClose.value = value;
 }
 // const data = await useFetch("http://3.111.70.214:1337/products");
 // const products = data.data._rawValue;
-onMounted(() => {
-  fetch("http://3.111.70.214:1337/products")
-    .then((res) => res.json())
-    .then((data) => (products.value = data))
-    .catch((err) => console.log(err.message));
-});
+// onMounted(() => {
+//   fetch("http://3.111.70.214:1337/products")
+//     .then((res) => res.json())
+//     .then((data) => (products.value = data))
+//     .catch((err) => console.log(err.message));
+// });
 </script>
 
 <style lang="scss">

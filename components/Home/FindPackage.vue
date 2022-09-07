@@ -11,7 +11,9 @@
                 v-for="occasion in occasions"
                 :key="occasion"
                 :value="occasion.Title"
-              >{{ occasion.Title }}</option>
+              >
+                {{ occasion.Title }}
+              </option>
             </optgroup>
           </select>
         </div>
@@ -23,7 +25,9 @@
                 v-for="relation in relations"
                 :key="relation"
                 :value="relation.Title"
-              >{{ relation.Title }}</option>
+              >
+                {{ relation.Title }}
+              </option>
             </optgroup>
           </select>
         </div>
@@ -36,25 +40,26 @@
 </template>
 
 <script setup>
+import occasions from "~/assets/data/occasions";
+import relations from "~/assets/data/relations";
 // const data = await useFetch("http://3.111.70.214:1337/occasions");
 // const occasions = data.data._rawValue;
 
 // const data1 = await useFetch("http://3.111.70.214:1337/relations");
 // const relations = data1.data._rawValue;
 
-const occasions = ref([]);
-const relations = ref([]);
+// const occasions = ref([]);
+// const relations = ref([]);
 
 onMounted(() => {
-  fetch("http://3.111.70.214:1337/occasions")
-    .then((res) => res.json())
-    .then((data) => (occasions.value = data))
-    .catch((err) => console.log(err.message));
-
-  fetch("http://3.111.70.214:1337/relations")
-    .then((res) => res.json())
-    .then((data) => (relations.value = data))
-    .catch((err) => console.log(err.message));
+  // fetch("http://3.111.70.214:1337/occasions")
+  //   .then((res) => res.json())
+  //   .then((data) => (occasions.value = data))
+  //   .catch((err) => console.log(err.message));
+  // fetch("http://3.111.70.214:1337/relations")
+  //   .then((res) => res.json())
+  //   .then((data) => (relations.value = data))
+  //   .catch((err) => console.log(err.message));
 });
 </script>
 

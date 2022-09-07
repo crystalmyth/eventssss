@@ -13,14 +13,18 @@
                   alt
                   class="img-fluid"
                 />
-                <h4>{{slide?.name}}</h4>
-                <span>{{slide?.location}}</span>
+                <h4>{{ slide?.name }}</h4>
+                <span>{{ slide?.location }}</span>
               </div>
               <div class="review-box-content">
                 <div class="review-box-content-rating">
-                  <i v-for="n in 5" :key="`star-${n}`" class="fa-solid fa-star"></i>
+                  <i
+                    v-for="n in 5"
+                    :key="`star-${n}`"
+                    class="fa-solid fa-star"
+                  ></i>
                 </div>
-                <p>{{slide?.content}}</p>
+                <p>{{ slide?.content }}</p>
               </div>
             </div>
           </slide>
@@ -35,15 +39,16 @@
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 
+import reviews from "~/assets/data/reviews";
 // const reviews = await useFetch("http://3.111.70.214:1337/company-reviews").data
 //   ._rawValue;
-const reviews = ref([]);
-onMounted(() => {
-  fetch("http://3.111.70.214:1337/company-reviews")
-    .then((res) => res.json())
-    .then((data) => (reviews.value = data))
-    .catch((err) => console.log(err.message));
-});
+// const reviews = ref([]);
+// onMounted(() => {
+//   fetch("http://3.111.70.214:1337/company-reviews")
+//     .then((res) => res.json())
+//     .then((data) => (reviews.value = data))
+//     .catch((err) => console.log(err.message));
+// });
 </script>
 
 <style lang="scss">

@@ -1,8 +1,8 @@
 <template>
   <main class="product-page">
-    <PartDatePicker :show="false" />
+    <PartDatePicker :show="bookShow" />
     <div class="container-fluid">
-      <PartBreadcrumb :breadcrumbs="['Home','Category','Product']" />
+      <PartBreadcrumb :breadcrumbs="['Home', 'Category', 'Product']" />
       <div class="product-page-body" v-if="selectedProduct">
         <div class="product-page-image">
           <img
@@ -13,7 +13,9 @@
         </div>
         <div class="product-page-content">
           <label for>25%</label>
-          <h2 class="product-page-content-title">{{selectedProduct[0].title}}</h2>
+          <h2 class="product-page-content-title">
+            {{ selectedProduct[0].title }}
+          </h2>
           <h4 class="product-page-content-price">
             <i class="fa-solid fa-indian-rupee-sign"></i> 2,500
             <del>
@@ -22,10 +24,10 @@
             </del>
           </h4>
           <PartProductCardRating :stars="5" :rating="2" />
-          <p>{{selectedProduct[0].content}}</p>
+          <p>{{ selectedProduct[0].content }}</p>
 
           <div class="product-page-content-buttons">
-            <button class="btn btn-book">
+            <button class="btn btn-book" @click="bookNow">
               <i class="fa-solid fa-cart-shopping"></i> Book Now
             </button>
             <button class="btn btn-heart">
@@ -57,17 +59,23 @@
             class="product-page-description-tabs-btn"
             :class="[selectedTab == 'description' ? 'active' : '']"
             @click="onTabClicked('description')"
-          >Descirption</div>
+          >
+            Descirption
+          </div>
           <div
             class="product-page-description-tabs-btn"
             :class="[selectedTab == 'information' ? 'active' : '']"
             @click="onTabClicked('information')"
-          >Additional Information</div>
+          >
+            Additional Information
+          </div>
           <div
             class="product-page-description-tabs-btn"
             :class="[selectedTab == 'review' ? 'active' : '']"
             @click="onTabClicked('review')"
-          >Reviews(5)</div>
+          >
+            Reviews(5)
+          </div>
         </div>
         <div
           class="product-page-description-content"
@@ -83,7 +91,15 @@
           class="product-page-description-content"
           :class="[selectedTab == 'review' ? 'active' : '']"
         >
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt necessitatibus soluta tempora eum delectus at incidunt odit maxime, explicabo ad eligendi fugiat asperiores quia adipisci architecto nisi, eveniet repellat temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, minima deleniti. Sed ad quam, voluptates, temporibus quas dolores, quod accusamus mollitia ea itaque iure? Sint at quae excepturi cumque reprehenderit!</p>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt
+            necessitatibus soluta tempora eum delectus at incidunt odit maxime,
+            explicabo ad eligendi fugiat asperiores quia adipisci architecto
+            nisi, eveniet repellat temporibus. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Veritatis, minima deleniti. Sed ad
+            quam, voluptates, temporibus quas dolores, quod accusamus mollitia
+            ea itaque iure? Sint at quae excepturi cumque reprehenderit!
+          </p>
         </div>
       </div>
     </div>
@@ -104,29 +120,36 @@
 </template>
 
 <script setup>
+import products from "~/assets/data/products";
 import $ from "jquery";
 
 const selectedTab = ref("description");
-const products = ref([]);
-const selectedProduct = ref(null);
+// const products = ref([]);
 const route = useRoute();
+const selectedProduct = products.filter(function (product) {
+  return product.slug === route.params.id;
+});
+
+const bookShow = ref(false);
+
+function bookNow() {
+  bookShow.value = !bookShow.value;
+}
 
 function onTabClicked(index) {
   selectedTab.value = index;
 }
 
 onMounted(() => {
-  fetch("http://3.111.70.214:1337/products")
-    .then((res) => res.json())
-    .then((data) => (products.value = data))
-    .catch((err) => console.log(err.message));
+  // fetch("http://3.111.70.214:1337/products")
+  //   .then((res) => res.json())
+  //   .then((data) => (products.value = data))
+  //   .catch((err) => console.log(err.message));
 
-  fetch(`http://3.111.70.214:1337/products?slug=${route.params.id}`)
-    .then((res) => res.json())
-    .then((data) => (selectedProduct.value = data))
-    .catch((err) => console.log(err.message));
-
-  console.log(selectedProduct);
+  // fetch(`http://3.111.70.214:1337/products?slug=${route.params.id}`)
+  //   .then((res) => res.json())
+  //   .then((data) => (selectedProduct.value = data))
+  //   .catch((err) => console.log(err.message));
 
   $(".product-page-image").mouseenter(function () {
     $(".product-page-image .img-fluid").css({ transform: "scale(1.3)" });

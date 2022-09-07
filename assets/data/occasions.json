@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "Title": "Birthday",
+    "category": {
+      "id": 1,
+      "Title": "Room Decoration",
+      "published_at": "2022-08-31T06:16:59.465Z",
+      "created_at": "2022-08-31T06:16:56.222Z",
+      "updated_at": "2022-08-31T06:16:59.484Z"
+    },
+    "featured": true,
+    "published_at": "2022-08-31T05:50:48.303Z",
+    "created_at": "2022-08-31T05:50:46.234Z",
+    "updated_at": "2022-08-31T06:25:39.965Z",
+    "icon": {
+      "id": 6,
+      "name": "3fc0a78fe1d534a6b001fef0fea650b4.webp",
+      "alternativeText": "",
+      "caption": "",
+      "width": 400,
+      "height": 300,
+      "formats": {
+        "thumbnail": {
+          "name": "thumbnail_3fc0a78fe1d534a6b001fef0fea650b4.webp",
+          "hash": "thumbnail_3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "width": 208,
+          "height": 156,
+          "size": 5.26,
+          "path": null,
+          "url": "/uploads/thumbnail_3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60.webp"
+        }
+      },
+      "hash": "3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60",
+      "ext": ".webp",
+      "mime": "image/webp",
+      "size": 11.28,
+      "url": "/uploads/3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60.webp",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2022-08-31T06:25:36.898Z",
+      "updated_at": "2022-08-31T06:25:36.909Z"
+    }
+  },
+  {
+    "id": 2,
+    "Title": "Anniversary",
+    "category": {
+      "id": 1,
+      "Title": "Room Decoration",
+      "published_at": "2022-08-31T06:16:59.465Z",
+      "created_at": "2022-08-31T06:16:56.222Z",
+      "updated_at": "2022-08-31T06:16:59.484Z"
+    },
+    "featured": true,
+    "published_at": "2022-08-31T05:51:00.098Z",
+    "created_at": "2022-08-31T05:50:58.446Z",
+    "updated_at": "2022-08-31T06:28:24.955Z",
+    "icon": {
+      "id": 7,
+      "name": "anniversary.png",
+      "alternativeText": "",
+      "caption": "",
+      "width": 128,
+      "height": 128,
+      "formats": null,
+      "hash": "anniversary_55b7d6ffd5",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 8.04,
+      "url": "/uploads/anniversary_55b7d6ffd5.png",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2022-08-31T06:28:21.584Z",
+      "updated_at": "2022-08-31T06:28:21.595Z"
+    }
+  },
+  {
+    "id": 3,
+    "Title": "Baby Shower",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:51:11.432Z",
+    "created_at": "2022-08-31T05:51:09.185Z",
+    "updated_at": "2022-08-31T05:51:11.444Z",
+    "icon": null
+  },
+  {
+    "id": 4,
+    "Title": "Welcome Baby",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:51:24.731Z",
+    "created_at": "2022-08-31T05:51:22.255Z",
+    "updated_at": "2022-08-31T05:51:24.741Z",
+    "icon": null
+  },
+  {
+    "id": 5,
+    "Title": "Rice Ceremony",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:51:38.348Z",
+    "created_at": "2022-08-31T05:51:36.078Z",
+    "updated_at": "2022-08-31T05:51:38.359Z",
+    "icon": null
+  },
+  {
+    "id": 6,
+    "Title": "Bachelor Party",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:51:50.187Z",
+    "created_at": "2022-08-31T05:51:48.530Z",
+    "updated_at": "2022-08-31T05:51:50.200Z",
+    "icon": null
+  },
+  {
+    "id": 7,
+    "Title": "Wedding",
+    "category": {
+      "id": 1,
+      "Title": "Room Decoration",
+      "published_at": "2022-08-31T06:16:59.465Z",
+      "created_at": "2022-08-31T06:16:56.222Z",
+      "updated_at": "2022-08-31T06:16:59.484Z"
+    },
+    "featured": null,
+    "published_at": "2022-08-31T05:52:01.880Z",
+    "created_at": "2022-08-31T05:51:59.937Z",
+    "updated_at": "2022-08-31T06:16:56.236Z",
+    "icon": null
+  },
+  {
+    "id": 8,
+    "Title": "Haldi",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:52:12.784Z",
+    "created_at": "2022-08-31T05:52:09.109Z",
+    "updated_at": "2022-08-31T05:52:12.793Z",
+    "icon": null
+  },
+  {
+    "id": 9,
+    "Title": "Proposal",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:52:24.446Z",
+    "created_at": "2022-08-31T05:52:21.634Z",
+    "updated_at": "2022-08-31T05:52:24.457Z",
+    "icon": null
+  },
+  {
+    "id": 10,
+    "Title": "Festival",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:52:39.946Z",
+    "created_at": "2022-08-31T05:52:37.785Z",
+    "updated_at": "2022-08-31T06:23:27.861Z",
+    "icon": null
+  },
+  {
+    "id": 11,
+    "Title": "Others",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:52:48.990Z",
+    "created_at": "2022-08-31T05:52:46.738Z",
+    "updated_at": "2022-08-31T05:52:49.001Z",
+    "icon": null
+  },
+  {
+    "id": 12,
+    "Title": "Corporate Event",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:53:23.314Z",
+    "created_at": "2022-08-31T05:53:20.641Z",
+    "updated_at": "2022-08-31T05:53:23.329Z",
+    "icon": null
+  },
+  {
+    "id": 13,
+    "Title": "Shop Opening",
+    "category": null,
+    "featured": null,
+    "published_at": "2022-08-31T05:53:36.826Z",
+    "created_at": "2022-08-31T05:53:33.456Z",
+    "updated_at": "2022-08-31T05:53:36.841Z",
+    "icon": null
+  },
+  {
+    "id": 14,
+    "Title": "Kids",
+    "category": null,
+    "featured": true,
+    "published_at": "2022-08-31T06:22:27.090Z",
+    "created_at": "2022-08-31T06:22:23.439Z",
+    "updated_at": "2022-08-31T06:30:06.593Z",
+    "icon": {
+      "id": 8,
+      "name": "playtime.png",
+      "alternativeText": "",
+      "caption": "",
+      "width": 128,
+      "height": 128,
+      "formats": null,
+      "hash": "playtime_d9c4f12788",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 7.84,
+      "url": "/uploads/playtime_d9c4f12788.png",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2022-08-31T06:30:02.394Z",
+      "updated_at": "2022-08-31T06:30:02.406Z"
+    }
+  },
+  {
+    "id": 15,
+    "Title": "Dinner",
+    "category": null,
+    "featured": true,
+    "published_at": "2022-08-31T06:22:42.267Z",
+    "created_at": "2022-08-31T06:22:37.543Z",
+    "updated_at": "2022-08-31T06:31:09.902Z",
+    "icon": {
+      "id": 9,
+      "name": "dinner.png",
+      "alternativeText": "",
+      "caption": "",
+      "width": 128,
+      "height": 128,
+      "formats": null,
+      "hash": "dinner_6f36f36aa5",
+      "ext": ".png",
+      "mime": "image/png",
+      "size": 6.28,
+      "url": "/uploads/dinner_6f36f36aa5.png",
+      "previewUrl": null,
+      "provider": "local",
+      "provider_metadata": null,
+      "created_at": "2022-08-31T06:31:06.606Z",
+      "updated_at": "2022-08-31T06:31:06.615Z"
+    }
+  }
+]

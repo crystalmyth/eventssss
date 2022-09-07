@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="product-filter" :class="[close ? 'display' :'']">
+    <div class="product-filter" :class="[close ? 'display' : '']">
       <div class="container-fluid">
         <h2 class="sticky-top">
           Product Categories
@@ -9,7 +9,11 @@
           </div>
         </h2>
         <div class="product-filter-categories">
-          <nuxt-link v-for="category in categories" :key="category.Title" to="/">
+          <nuxt-link
+            v-for="category in categories"
+            :key="category.Title"
+            to="/"
+          >
             {{ category.Title }}
             <span>(5)</span>
           </nuxt-link>
@@ -31,11 +35,21 @@
         </div>
         <h2>Filter By Ocassions</h2>
         <div class="product-filter-categories">
-          <nuxt-link v-for="occasion in occasions" :key="occasion.Title" to="/">{{occasion.Title}}</nuxt-link>
+          <nuxt-link
+            v-for="occasion in occasions"
+            :key="occasion.Title"
+            to="/"
+            >{{ occasion.Title }}</nuxt-link
+          >
         </div>
         <h2>Filter By Relations</h2>
         <div class="product-filter-tags">
-          <nuxt-link v-for="relation in relations" :key="relation.Title" to="/">{{relation.Title}}</nuxt-link>
+          <nuxt-link
+            v-for="relation in relations"
+            :key="relation.Title"
+            to="/"
+            >{{ relation.Title }}</nuxt-link
+          >
         </div>
       </div>
     </div>
@@ -43,32 +57,35 @@
 </template>
 
 <script setup>
+import categories from "~/assets/data/categories";
+import occasions from "~/assets/data/occasions";
+import relations from "~/assets/data/relations";
 // const categories = await useFetch("http://3.111.70.214:1337/categories").data
 //   ._rawValue;
 // const occasions = await useFetch("http://3.111.70.214:1337/occasions").data
 //   ._rawValue;
 // const relations = await useFetch("http://3.111.70.214:1337/relations").data
 //   ._rawValue;
-const categories = ref([]);
-const occasions = ref([]);
-const relations = ref([]);
+// const categories = ref([]);
+// const occasions = ref([]);
+// const relations = ref([]);
 
-onMounted(() => {
-  fetch("http://3.111.70.214:1337/categories")
-    .then((res) => res.json())
-    .then((data) => (categories.value = data))
-    .catch((err) => console.log(err.message));
+// onMounted(() => {
+//   fetch("http://3.111.70.214:1337/categories")
+//     .then((res) => res.json())
+//     .then((data) => (categories.value = data))
+//     .catch((err) => console.log(err.message));
 
-  fetch("http://3.111.70.214:1337/occasions")
-    .then((res) => res.json())
-    .then((data) => (occasions.value = data))
-    .catch((err) => console.log(err.message));
+//   fetch("http://3.111.70.214:1337/occasions")
+//     .then((res) => res.json())
+//     .then((data) => (occasions.value = data))
+//     .catch((err) => console.log(err.message));
 
-  fetch("http://3.111.70.214:1337/relations")
-    .then((res) => res.json())
-    .then((data) => (relations.value = data))
-    .catch((err) => console.log(err.message));
-});
+//   fetch("http://3.111.70.214:1337/relations")
+//     .then((res) => res.json())
+//     .then((data) => (relations.value = data))
+//     .catch((err) => console.log(err.message));
+// });
 
 const props = defineProps({
   close: Boolean,

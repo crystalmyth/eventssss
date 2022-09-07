@@ -26,13 +26,14 @@
 </template>
 
 <script setup>
-const products = ref([]);
-onMounted(() => {
-  fetch("http://3.111.70.214:1337/products")
-    .then((res) => res.json())
-    .then((data) => (products.value = data))
-    .catch((err) => console.log(err.message));
-});
+import products from "~/assets/data/products";
+// const products = ref([]);
+// onMounted(() => {
+//   fetch("http://3.111.70.214:1337/products")
+//     .then((res) => res.json())
+//     .then((data) => (products.value = data))
+//     .catch((err) => console.log(err.message));
+// });
 </script>
 
 <style lang="scss">

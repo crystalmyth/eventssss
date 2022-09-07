@@ -9,8 +9,12 @@
         </div>
         <!-- Navbar Menu -->
         <div class="navbar-menu">
-          <div v-for="(link, index) in menu" :key="`link-${index}`" class="navbar-menu-box">
-            <nuxt-link :to="link.link">{{link.name}}</nuxt-link>
+          <div
+            v-for="(link, index) in menu"
+            :key="`link-${index}`"
+            class="navbar-menu-box"
+          >
+            <nuxt-link :to="link.link">{{ link.name }}</nuxt-link>
           </div>
         </div>
         <!-- Navbar Search -->
@@ -36,10 +40,12 @@
 </template>
 
 <script setup>
+import data from "~/assets/data/web-profile";
 import $ from "jquery";
 
-const data = await useFetch("http://3.111.70.214:1337/web-profile");
-const profile = data.data._rawValue;
+// const data = await useFetch("http://3.111.70.214:1337/web-profile");
+// const profile = data.data._rawValue;
+const profile = data;
 const Logo = `http://3.111.70.214:1337${profile.Logo.url}`;
 
 const menu = [

@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "Title": "Room Decoration",
+    "published_at": "2022-08-31T06:16:59.465Z",
+    "created_at": "2022-08-31T06:16:56.222Z",
+    "updated_at": "2022-08-31T06:16:59.484Z",
+    "occasions": [
+      {
+        "id": 1,
+        "Title": "Birthday",
+        "category": 1,
+        "featured": true,
+        "published_at": "2022-08-31T05:50:48.303Z",
+        "created_at": "2022-08-31T05:50:46.234Z",
+        "updated_at": "2022-08-31T06:25:39.965Z",
+        "icon": {
+          "id": 6,
+          "name": "3fc0a78fe1d534a6b001fef0fea650b4.webp",
+          "alternativeText": "",
+          "caption": "",
+          "width": 400,
+          "height": 300,
+          "formats": {
+            "thumbnail": {
+              "name": "thumbnail_3fc0a78fe1d534a6b001fef0fea650b4.webp",
+              "hash": "thumbnail_3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60",
+              "ext": ".webp",
+              "mime": "image/webp",
+              "width": 208,
+              "height": 156,
+              "size": 5.26,
+              "path": null,
+              "url": "/uploads/thumbnail_3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60.webp"
+            }
+          },
+          "hash": "3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60",
+          "ext": ".webp",
+          "mime": "image/webp",
+          "size": 11.28,
+          "url": "/uploads/3fc0a78fe1d534a6b001fef0fea650b4_7416ce4f60.webp",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "created_at": "2022-08-31T06:25:36.898Z",
+          "updated_at": "2022-08-31T06:25:36.909Z"
+        }
+      },
+      {
+        "id": 2,
+        "Title": "Anniversary",
+        "category": 1,
+        "featured": true,
+        "published_at": "2022-08-31T05:51:00.098Z",
+        "created_at": "2022-08-31T05:50:58.446Z",
+        "updated_at": "2022-08-31T06:28:24.955Z",
+        "icon": {
+          "id": 7,
+          "name": "anniversary.png",
+          "alternativeText": "",
+          "caption": "",
+          "width": 128,
+          "height": 128,
+          "formats": null,
+          "hash": "anniversary_55b7d6ffd5",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": 8.04,
+          "url": "/uploads/anniversary_55b7d6ffd5.png",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "created_at": "2022-08-31T06:28:21.584Z",
+          "updated_at": "2022-08-31T06:28:21.595Z"
+        }
+      },
+      {
+        "id": 7,
+        "Title": "Wedding",
+        "category": 1,
+        "featured": null,
+        "published_at": "2022-08-31T05:52:01.880Z",
+        "created_at": "2022-08-31T05:51:59.937Z",
+        "updated_at": "2022-08-31T06:16:56.236Z",
+        "icon": null
+      }
+    ],
+    "relation": [
+      {
+        "id": 2,
+        "Title": "Wife",
+        "category": 1,
+        "published_at": "2022-08-31T06:01:06.188Z",
+        "created_at": "2022-08-31T06:01:04.327Z",
+        "updated_at": "2022-08-31T06:16:56.237Z"
+      },
+      {
+        "id": 3,
+        "Title": "Girlfriend",
+        "category": 1,
+        "published_at": "2022-08-31T06:01:14.925Z",
+        "created_at": "2022-08-31T06:01:12.962Z",
+        "updated_at": "2022-08-31T06:16:56.237Z"
+      },
+      {
+        "id": 4,
+        "Title": "Boyfriend",
+        "category": 1,
+        "published_at": "2022-08-31T06:01:24.281Z",
+        "created_at": "2022-08-31T06:01:22.459Z",
+        "updated_at": "2022-08-31T06:16:56.237Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "Title": "Stae Decoration",
+    "published_at": "2022-08-31T07:35:30.594Z",
+    "created_at": "2022-08-31T07:35:27.877Z",
+    "updated_at": "2022-08-31T07:35:30.610Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 3,
+    "Title": "Candle Light Dinner",
+    "published_at": "2022-08-31T07:36:06.094Z",
+    "created_at": "2022-08-31T07:36:04.100Z",
+    "updated_at": "2022-08-31T07:36:06.109Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 4,
+    "Title": "Welcome Baby",
+    "published_at": "2022-08-31T07:36:17.530Z",
+    "created_at": "2022-08-31T07:36:15.616Z",
+    "updated_at": "2022-08-31T07:36:17.545Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 5,
+    "Title": "Terrace Decoration",
+    "published_at": "2022-08-31T07:36:31.919Z",
+    "created_at": "2022-08-31T07:36:29.500Z",
+    "updated_at": "2022-08-31T07:36:31.936Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 6,
+    "Title": "Car Decoration",
+    "published_at": "2022-08-31T07:36:43.226Z",
+    "created_at": "2022-08-31T07:36:41.290Z",
+    "updated_at": "2022-08-31T07:36:43.241Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 7,
+    "Title": "Proposal Decoration",
+    "published_at": "2022-08-31T07:36:56.798Z",
+    "created_at": "2022-08-31T07:36:54.823Z",
+    "updated_at": "2022-08-31T07:36:56.829Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 8,
+    "Title": "Cobana Decoration",
+    "published_at": "2022-08-31T07:37:12.062Z",
+    "created_at": "2022-08-31T07:37:09.896Z",
+    "updated_at": "2022-08-31T07:37:12.077Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 9,
+    "Title": "Wedding Night Decoration",
+    "published_at": "2022-08-31T07:37:33.035Z",
+    "created_at": "2022-08-31T07:37:31.031Z",
+    "updated_at": "2022-08-31T07:37:33.051Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 10,
+    "Title": "Bachelorette Decoration",
+    "published_at": "2022-08-31T07:37:57.542Z",
+    "created_at": "2022-08-31T07:37:54.766Z",
+    "updated_at": "2022-08-31T07:37:57.557Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 11,
+    "Title": "Hotel Room Decoration",
+    "published_at": "2022-08-31T07:38:11.841Z",
+    "created_at": "2022-08-31T07:38:09.669Z",
+    "updated_at": "2022-08-31T07:38:11.859Z",
+    "occasions": [],
+    "relation": []
+  },
+  {
+    "id": 12,
+    "Title": "Ballon Bouquets",
+    "published_at": "2022-08-31T07:38:41.184Z",
+    "created_at": "2022-08-31T07:38:39.017Z",
+    "updated_at": "2022-08-31T07:38:41.198Z",
+    "occasions": [],
+    "relation": []
+  }
+]

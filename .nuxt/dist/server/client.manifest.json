@@ -1,230 +1,141 @@
 {
-  "node_modules/nuxt/dist/app/entry.mjs": {
-    "resourceType": "script",
-    "module": true,
-    "file": "entry.f6d7d49b.mjs",
-    "src": "node_modules/nuxt/dist/app/entry.mjs",
+  "@vite/client": {
     "isEntry": true,
-    "dynamicImports": [
-      "pages/about.vue",
-      "pages/category.vue",
-      "pages/contact.vue",
-      "pages/index.vue",
-      "pages/product/[id].vue",
-      "virtual:nuxt:/Applications/XAMPP/xamppfiles/htdocs/paean/ecommerce/frontend/.nuxt/error-component.mjs",
-      "layouts/default.vue"
-    ],
+    "file": "@vite/client",
     "css": [
-      "entry.bf69ef65.css"
-    ]
+      "assets/scss/main.scss",
+      "components/Part/ProductFilter.vue?vue&type=style&index=0&lang.scss",
+      "components/Part/breadcrumb.vue?vue&type=style&index=0&lang.scss",
+      "components/Part/productContainer.vue?vue&type=style&index=0&lang.scss",
+      "components/Part/productCart.vue?vue&type=style&index=0&lang.scss",
+      "node_modules/vue3-carousel/dist/carousel.css",
+      "components/Home/Hero.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/FindPackage.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/Occation.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/TodayDeal.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/WeekDeal.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/Trending.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/Review.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/Subscribe.vue?vue&type=style&index=0&lang.scss",
+      "components/Home/FeaturedIn.vue?vue&type=style&index=0&lang.scss",
+      "node_modules/v-calendar/dist/style.css",
+      "components/Part/DatePicker.vue?vue&type=style&index=0&lang.scss",
+      "components/Part/ProductCardRating.vue?vue&type=style&index=0&lang.scss",
+      "pages/category.vue?vue&type=style&index=0&lang.scss",
+      "pages/contact.vue?vue&type=style&index=0&lang.scss",
+      "pages/product/[id].vue?vue&type=style&index=0&lang.scss",
+      "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=bc8852ab&lang.css",
+      "node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=6b2d7187&lang.css",
+      "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=f37408fc&lang.css",
+      "components/Inc/Footer.vue?vue&type=style&index=0&lang.scss"
+    ],
+    "module": true,
+    "resourceType": "script"
   },
-  "entry.bf69ef65.css": {
-    "file": "entry.bf69ef65.css",
+  "assets/scss/main.scss": {
+    "file": "assets/scss/main.scss",
     "resourceType": "style"
   },
-  "virtual:nuxt:/Applications/XAMPP/xamppfiles/htdocs/paean/ecommerce/frontend/.nuxt/error-component.mjs": {
-    "resourceType": "script",
-    "module": true,
-    "file": "error-component.982de0bc.mjs",
-    "src": "virtual:nuxt:/Applications/XAMPP/xamppfiles/htdocs/paean/ecommerce/frontend/.nuxt/error-component.mjs",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs"
-    ],
-    "dynamicImports": [
-      "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
-      "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
-    ]
-  },
-  "pages/about.vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "about.7c301afc.mjs",
-    "src": "pages/about.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "__plugin-vue_export-helper.7287ed4b.mjs",
-      "node_modules/nuxt/dist/app/entry.mjs"
-    ]
-  },
-  "__plugin-vue_export-helper.7287ed4b.mjs": {
-    "resourceType": "script",
-    "module": true,
-    "file": "_plugin-vue_export-helper.7287ed4b.mjs"
-  },
-  "pages/category.vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "category.5d0a526f.mjs",
-    "src": "pages/category.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs",
-      "_productContainer.32b7bbf5.mjs",
-      "_productCart.f08643ee.mjs",
-      "__plugin-vue_export-helper.7287ed4b.mjs"
-    ],
-    "css": [
-      "category.f79fa6a3.css"
-    ]
-  },
-  "category.f79fa6a3.css": {
-    "file": "category.f79fa6a3.css",
+  "components/Part/ProductFilter.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Part/ProductFilter.vue?vue&type=style&index=0&lang.scss",
     "resourceType": "style"
   },
-  "_productContainer.32b7bbf5.mjs": {
-    "resourceType": "script",
-    "module": true,
-    "file": "productContainer.32b7bbf5.mjs",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs",
-      "__plugin-vue_export-helper.7287ed4b.mjs"
-    ]
-  },
-  "_productCart.f08643ee.mjs": {
-    "resourceType": "script",
-    "module": true,
-    "file": "productCart.f08643ee.mjs",
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs"
-    ]
-  },
-  "pages/contact.vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "contact.72708e7b.mjs",
-    "src": "pages/contact.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs"
-    ],
-    "css": [
-      "contact.18c1b8ee.css"
-    ]
-  },
-  "contact.18c1b8ee.css": {
-    "file": "contact.18c1b8ee.css",
+  "components/Part/breadcrumb.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Part/breadcrumb.vue?vue&type=style&index=0&lang.scss",
     "resourceType": "style"
   },
-  "pages/index.vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "index.3e1b453c.mjs",
-    "src": "pages/index.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs",
-      "__plugin-vue_export-helper.7287ed4b.mjs",
-      "_productCart.f08643ee.mjs"
-    ]
-  },
-  "pages/product/[id].vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "_id_.955501c8.mjs",
-    "src": "pages/product/[id].vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs",
-      "_productContainer.32b7bbf5.mjs",
-      "_productCart.f08643ee.mjs",
-      "__plugin-vue_export-helper.7287ed4b.mjs"
-    ],
-    "css": [
-      "[id].c3ec2505.css"
-    ]
-  },
-  "[id].c3ec2505.css": {
-    "file": "[id].c3ec2505.css",
+  "components/Part/productContainer.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Part/productContainer.vue?vue&type=style&index=0&lang.scss",
     "resourceType": "style"
   },
-  "layouts/default.vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "default.2f5d41cd.mjs",
-    "src": "layouts/default.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "__plugin-vue_export-helper.7287ed4b.mjs",
-      "node_modules/nuxt/dist/app/entry.mjs"
-    ],
-    "css": [
-      "default.72899795.css"
-    ]
-  },
-  "default.72899795.css": {
-    "file": "default.72899795.css",
+  "components/Part/productCart.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Part/productCart.vue?vue&type=style&index=0&lang.scss",
     "resourceType": "style"
   },
-  "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "error-404.80c8f4c9.mjs",
-    "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs",
-      "__plugin-vue_export-helper.7287ed4b.mjs"
-    ],
-    "css": [
-      "error-404.7729cee9.css"
-    ]
-  },
-  "error-404.7729cee9.css": {
-    "file": "error-404.7729cee9.css",
+  "node_modules/vue3-carousel/dist/carousel.css": {
+    "file": "node_modules/vue3-carousel/dist/carousel.css",
     "resourceType": "style"
   },
-  "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
-    "resourceType": "script",
-    "module": true,
-    "file": "error-500.accdfba1.mjs",
-    "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
-    "isDynamicEntry": true,
-    "imports": [
-      "node_modules/nuxt/dist/app/entry.mjs",
-      "__plugin-vue_export-helper.7287ed4b.mjs"
-    ],
-    "css": [
-      "error-500.08851880.css"
-    ]
-  },
-  "error-500.08851880.css": {
-    "file": "error-500.08851880.css",
+  "components/Home/Hero.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/Hero.vue?vue&type=style&index=0&lang.scss",
     "resourceType": "style"
   },
-  "node_modules/@nuxt/ui-templates/dist/templates/error-404.css": {
-    "resourceType": "style",
-    "file": "error-404.7729cee9.css",
-    "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
+  "components/Home/FindPackage.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/FindPackage.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
   },
-  "layouts/default.css": {
-    "resourceType": "style",
-    "file": "default.72899795.css",
-    "src": "layouts/default.css"
+  "components/Home/Occation.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/Occation.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
   },
-  "node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
-    "resourceType": "style",
-    "file": "error-500.08851880.css",
-    "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.css"
+  "components/Home/TodayDeal.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/TodayDeal.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
   },
-  "pages/category.css": {
-    "resourceType": "style",
-    "file": "category.f79fa6a3.css",
-    "src": "pages/category.css"
+  "components/Home/WeekDeal.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/WeekDeal.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
   },
-  "pages/product/[id].css": {
-    "resourceType": "style",
-    "file": "[id].c3ec2505.css",
-    "src": "pages/product/[id].css"
+  "components/Home/Trending.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/Trending.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
   },
-  "pages/contact.css": {
-    "resourceType": "style",
-    "file": "contact.18c1b8ee.css",
-    "src": "pages/contact.css"
+  "components/Home/Review.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/Review.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
   },
-  "node_modules/nuxt/dist/app/entry.css": {
-    "resourceType": "style",
-    "file": "entry.bf69ef65.css",
-    "src": "node_modules/nuxt/dist/app/entry.css"
+  "components/Home/Subscribe.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/Subscribe.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "components/Home/FeaturedIn.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Home/FeaturedIn.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "node_modules/v-calendar/dist/style.css": {
+    "file": "node_modules/v-calendar/dist/style.css",
+    "resourceType": "style"
+  },
+  "components/Part/DatePicker.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Part/DatePicker.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "components/Part/ProductCardRating.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Part/ProductCardRating.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "pages/category.vue?vue&type=style&index=0&lang.scss": {
+    "file": "pages/category.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "pages/contact.vue?vue&type=style&index=0&lang.scss": {
+    "file": "pages/contact.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "pages/product/[id].vue?vue&type=style&index=0&lang.scss": {
+    "file": "pages/product/[id].vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=bc8852ab&lang.css": {
+    "file": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=bc8852ab&lang.css",
+    "resourceType": "style"
+  },
+  "node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=6b2d7187&lang.css": {
+    "file": "node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=6b2d7187&lang.css",
+    "resourceType": "style"
+  },
+  "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=f37408fc&lang.css": {
+    "file": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=f37408fc&lang.css",
+    "resourceType": "style"
+  },
+  "components/Inc/Footer.vue?vue&type=style&index=0&lang.scss": {
+    "file": "components/Inc/Footer.vue?vue&type=style&index=0&lang.scss",
+    "resourceType": "style"
+  },
+  "/Applications/XAMPP/xamppfiles/htdocs/paean/ecommerce/frontend/node_modules/nuxt/dist/app/entry": {
+    "isEntry": true,
+    "file": "/Applications/XAMPP/xamppfiles/htdocs/paean/ecommerce/frontend/node_modules/nuxt/dist/app/entry",
+    "module": true,
+    "resourceType": "script"
   }
 }

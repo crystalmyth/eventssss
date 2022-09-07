@@ -22,16 +22,18 @@
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+
+import companies from "~/assets/data/companies";
 // const companies = await useFetch("http://3.111.70.214:1337/companies").data
 //   ._rawValue;
-const companies = ref([]);
+// const companies = ref([]);
 
-onMounted(() => {
-  fetch("http://3.111.70.214:1337/companies")
-    .then((res) => res.json())
-    .then((data) => (companies.value = data))
-    .catch((err) => console.log(err.message));
-});
+// onMounted(() => {
+//   fetch("http://3.111.70.214:1337/companies")
+//     .then((res) => res.json())
+//     .then((data) => (companies.value = data))
+//     .catch((err) => console.log(err.message));
+// });
 </script>
 
 <style lang="scss">

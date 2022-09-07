@@ -1,0 +1,49 @@
+{
+  "id": 1,
+  "Title": "Event Application",
+  "published_at": "2022-08-31T04:14:28.582Z",
+  "created_at": "2022-08-31T04:14:26.057Z",
+  "updated_at": "2022-08-31T04:14:28.601Z",
+  "Logo": {
+    "id": 2,
+    "name": "ZDF_logo!_Logo_2021.svg.png",
+    "alternativeText": "",
+    "caption": "",
+    "width": 640,
+    "height": 273,
+    "formats": {
+      "thumbnail": {
+        "name": "thumbnail_ZDF_logo!_Logo_2021.svg.png",
+        "hash": "thumbnail_ZDF_logo_Logo_2021_svg_d920ea9d19",
+        "ext": ".png",
+        "mime": "image/png",
+        "width": 245,
+        "height": 105,
+        "size": 10.75,
+        "path": null,
+        "url": "/uploads/thumbnail_ZDF_logo_Logo_2021_svg_d920ea9d19.png"
+      },
+      "small": {
+        "name": "small_ZDF_logo!_Logo_2021.svg.png",
+        "hash": "small_ZDF_logo_Logo_2021_svg_d920ea9d19",
+        "ext": ".png",
+        "mime": "image/png",
+        "width": 500,
+        "height": 213,
+        "size": 26.52,
+        "path": null,
+        "url": "/uploads/small_ZDF_logo_Logo_2021_svg_d920ea9d19.png"
+      }
+    },
+    "hash": "ZDF_logo_Logo_2021_svg_d920ea9d19",
+    "ext": ".png",
+    "mime": "image/png",
+    "size": 16.69,
+    "url": "/uploads/ZDF_logo_Logo_2021_svg_d920ea9d19.png",
+    "previewUrl": null,
+    "provider": "local",
+    "provider_metadata": null,
+    "created_at": "2022-08-31T04:14:21.926Z",
+    "updated_at": "2022-08-31T04:14:21.938Z"
+  }
+}

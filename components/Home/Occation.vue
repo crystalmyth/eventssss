@@ -13,7 +13,7 @@
                 class="img-fluid"
               />
               <div class="occation-section-list-box-content">
-                <h4>{{slide.Title}}</h4>
+                <h4>{{ slide.Title }}</h4>
                 <span>Products(4)</span>
               </div>
               <i class="fa-solid fa-angle-right"></i>
@@ -34,17 +34,19 @@
 // If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-
+import data from "~/assets/data/occasions";
 // const data = await useFetch("http://3.111.70.214:1337/occasions?featured=true");
 // const occasions = data.data._rawValue;
 
-const occasions = ref([]);
-onMounted(() => {
-  fetch("http://3.111.70.214:1337/occasions?featured=true")
-    .then((res) => res.json())
-    .then((data) => (occasions.value = data))
-    .catch((err) => console.log(err.message));
+const occasions = data.filter(function (o) {
+  return o.featured === true;
 });
+// onMounted(() => {
+//   fetch("http://3.111.70.214:1337/occasions?featured=true")
+//     .then((res) => res.json())
+//     .then((data) => (occasions.value = data))
+//     .catch((err) => console.log(err.message));
+// });
 </script>
 
 <style lang="scss">

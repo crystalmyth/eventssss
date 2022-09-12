@@ -57,7 +57,7 @@ const props = defineProps({
   overflow-y: auto;
   background-color: $white;
   width: 100%;
-  padding-top: 8rem;
+  padding-top: 5rem;
   .container-fluid {
     display: flex;
     flex-direction: column;

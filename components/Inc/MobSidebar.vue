@@ -50,14 +50,14 @@ const props = defineProps({
 .mob-sidebar {
   position: fixed;
   z-index: -1;
-  top: 6rem;
+  top: 0rem;
   left: 0;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
   background-color: $white;
   width: 100%;
-  padding-top: 3rem;
+  padding-top: 8rem;
   .container-fluid {
     display: flex;
     flex-direction: column;

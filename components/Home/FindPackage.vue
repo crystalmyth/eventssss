@@ -83,6 +83,10 @@ onMounted(() => {
       display: grid;
       grid-gap: 1rem;
       grid-template-columns: 1fr 1fr 10rem;
+
+      @media only screen and (orientation: portrait) {
+        grid-template-columns: repeat(1, 1fr);
+      }
       &-select {
         font-size: 1.6rem;
         height: 4rem;

@@ -66,6 +66,11 @@ import reviews from "~/assets/data/reviews";
     grid-gap: 2rem;
     align-items: center;
     width: 100%;
+
+    @media only screen and (orientation: portrait) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
     &-img {
       img {
         height: 10rem;
@@ -86,6 +91,11 @@ import reviews from "~/assets/data/reviews";
       flex-direction: column;
       align-items: flex-start;
       text-align: left;
+
+      @media only screen and (orientation: portrait) {
+        align-items: center;
+      }
+
       i {
         color: $gold;
         margin-right: 0.5rem;

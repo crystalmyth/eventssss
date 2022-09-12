@@ -13,6 +13,11 @@
     background-size: 1rem 1px;
     background-repeat: repeat-x;
 
+    @media only screen and (orientation: portrait) {
+        display: none;
+    }
+
+
     .container-fluid {
         display: grid;
         grid-template-columns: 10rem auto 40rem auto;
@@ -23,6 +28,28 @@
             align-items: center;
             font-size: 1.6rem;
         }
+    }
+
+    &-badge {
+        position: absolute;
+        top: -2rem;
+        right: -1rem;
+
+        .fa-solid {
+            font-size: 1.2rem !important;
+            margin-right: -0.5rem;
+        }
+    }
+
+    .wishlist {
+        left: 60%;
+        transform: translateX(-50%) scale(0.8);
+        background-color: $orange;
+        color: $white;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &-menu {
@@ -36,6 +63,7 @@
     &-buttons {
         &-box {
             width: 5rem;
+            position: relative;
         }
     }
 

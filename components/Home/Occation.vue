@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <h2>Find By Occation</h2>
       <div class="occation-section-list">
-        <carousel :items-to-show="4">
+        <carousel :items-to-show="showItem">
           <slide v-for="slide in occasions" :key="slide.Title">
             <div class="occation-section-list-box shadow">
               <img
@@ -37,16 +37,20 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import data from "~/assets/data/occasions";
 // const data = await useFetch("http://3.111.70.214:1337/occasions?featured=true");
 // const occasions = data.data._rawValue;
-
+const showItem = ref(4);
 const occasions = data.filter(function (o) {
   return o.featured === true;
 });
-// onMounted(() => {
-//   fetch("http://3.111.70.214:1337/occasions?featured=true")
-//     .then((res) => res.json())
-//     .then((data) => (occasions.value = data))
-//     .catch((err) => console.log(err.message));
-// });
+
+onMounted(() => {
+  if (window.innerHeight > window.innerWidth) {
+    showItem.value = ref(1);
+  }
+  // fetch("http://3.111.70.214:1337/occasions?featured=true")
+  //   .then((res) => res.json())
+  //   .then((data) => (occasions.value = data))
+  //   .catch((err) => console.log(err.message));
+});
 </script>
 
 <style lang="scss">

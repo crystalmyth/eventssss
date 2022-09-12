@@ -29,9 +29,14 @@
           </div>
           <div class="navbar-buttons-box">
             <i class="fa-solid fa-heart"></i>
+            <span class="navbar-badge wishlist"> 2 </span>
           </div>
           <div class="navbar-buttons-box">
             <i class="fa-solid fa-cart-shopping"></i>
+            <span class="navbar-badge">
+              <i class="fa-solid fa-indian-rupee-sign"></i>
+              1,324
+            </span>
           </div>
         </div>
       </div>

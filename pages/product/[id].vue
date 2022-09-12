@@ -175,6 +175,10 @@ onMounted(() => {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
+
+    @media only screen and (orientation: portrait) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
   &-image {
     border: 0.1rem dashed rgba($light-dark, 0.6);
@@ -204,6 +208,11 @@ onMounted(() => {
       align-items: center;
       justify-content: left;
       padding: 2rem 0rem;
+
+      @media only screen and (orientation: portrait) {
+        align-items: flex-start !important;
+        text-align: left !important;
+      }
     }
     &-price {
       font-size: 3rem;
@@ -230,6 +239,11 @@ onMounted(() => {
       display: flex;
       align-items: center;
       grid-gap: 2rem;
+
+      @media only screen and (orientation: portrait) {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 2rem;
+      }
       .btn {
         font-size: 2rem;
         &-book {

@@ -1,6 +1,7 @@
 <template>
   <div>
     <IncNavbar />
+    <IncMobNavbar />
     <slot />
     <IncFooter />
   </div>
@@ -10,5 +11,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>

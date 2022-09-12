@@ -15,9 +15,7 @@
               <div class="today-deal-list-box-content">
                 <h4 class="today-deal-list-box-content-title">Title</h4>
                 <div class="today-deal-list-box-content-price">
-                  <h5>
-                    <i class="fa-solid fa-indian-rupee-sign"></i> 2,500
-                  </h5>
+                  <h5><i class="fa-solid fa-indian-rupee-sign"></i> 2,500</h5>
                   <del>
                     <i class="fa-solid fa-indian-rupee-sign"></i> 3,200
                   </del>
@@ -30,16 +28,27 @@
                   <i class="fa-solid fa-star"></i>
                   (5 Reviews)
                 </div>
-                <div
-                  class="today-deal-list-box-content-description"
-                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat sint ratione error sed aliquam facere ab officiis sapiente saepe, laborum, possimus voluptas nemo ut consectetur. Fuga quod molestiae sapiente officia?</div>
+                <div class="today-deal-list-box-content-description">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat sint ratione error sed aliquam facere ab officiis
+                  sapiente saepe, laborum, possimus voluptas nemo ut
+                  consectetur. Fuga quod molestiae sapiente officia?
+                </div>
                 <div class="today-deal-list-box-content-hurry">
                   <p>Hurry up! Sales end in:</p>
                   <div class="today-deal-list-box-content-hurry-list">
-                    <div class="today-deal-list-box-content-hurry-list-box">208</div>
-                    <div class="today-deal-list-box-content-hurry-list-box">12</div>
-                    <div class="today-deal-list-box-content-hurry-list-box">08</div>
-                    <div class="today-deal-list-box-content-hurry-list-box">06</div>
+                    <div class="today-deal-list-box-content-hurry-list-box">
+                      208
+                    </div>
+                    <div class="today-deal-list-box-content-hurry-list-box">
+                      12
+                    </div>
+                    <div class="today-deal-list-box-content-hurry-list-box">
+                      08
+                    </div>
+                    <div class="today-deal-list-box-content-hurry-list-box">
+                      06
+                    </div>
                   </div>
                   <div class="progress mt-3">
                     <div
@@ -52,7 +61,9 @@
                     ></div>
                   </div>
                 </div>
-                <div class="taday-deal-list-box-content-available">Available: 46/81</div>
+                <div class="taday-deal-list-box-content-available">
+                  Available: 46/81
+                </div>
               </div>
             </div>
           </slide>
@@ -89,6 +100,11 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
       justify-content: flex-start;
       width: 100%;
       border: 0.2rem dashed $danger;
+
+      @media only screen and (orientation: portrait) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
       img {
         height: 40rem;
       }
@@ -105,6 +121,11 @@ import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
         }
         &-title {
           font-size: 2.4rem;
+
+          @media only screen and (orientation: portrait) {
+            font-size: 3.5rem;
+            font-weight: bold;
+          }
         }
         &-price {
           display: flex;

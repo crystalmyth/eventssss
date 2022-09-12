@@ -4,7 +4,13 @@
       <div class="container-fluid">
         <div class="contact-us-top">
           <h2>Don’t hesitate to contact us if you need help.</h2>
-          <p>Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accu santium olorem que laud antium id est laborum.</p>
+          <p>
+            Velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+            occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum. Sed ut perspiciatis unde omnis iste
+            natus error sit voluptatem accu santium olorem que laud antium id
+            est laborum.
+          </p>
         </div>
         <div class="contact-us-list">
           <div
@@ -16,7 +22,12 @@
               <i :class="contact.icon"></i>
               {{ contact.title }}
             </div>
-            <p v-for="detail in contact.content" :key="`contact-content-${detail}`">{{detail}}</p>
+            <p
+              v-for="detail in contact.content"
+              :key="`contact-content-${detail}`"
+            >
+              {{ detail }}
+            </p>
           </div>
         </div>
       </div>
@@ -31,10 +42,21 @@
               <input type="text" placeholder="Name *" class="form-control" />
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Contact *" class="form-control" />
+              <input
+                type="email"
+                placeholder="Contact *"
+                class="form-control"
+              />
             </div>
             <div class="form-group">
-              <textarea name id cols="30" rows="10" class="form-control" placeholder="Message"></textarea>
+              <textarea
+                name
+                id
+                cols="30"
+                rows="10"
+                class="form-control"
+                placeholder="Message"
+              ></textarea>
             </div>
             <div class="form-submit">
               <div class="btn btn-primary">
@@ -47,7 +69,7 @@
         <div class="contact-us-body-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1754.1043551816033!2d77.05506670806535!3d28.443124204065096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1861de9d7bb9%3A0xe403eb9336f57e45!2sUNITECH%20CYBER%20PARK%2C%20Durga%20Colony%2C%20Sector%2039%2C%20Gurugram%2C%20Haryana%20122003!5e0!3m2!1sen!2sin!4v1661364046794!5m2!1sen!2sin"
-            style="border:0;"
+            style="border: 0"
             allowfullscreen
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -94,6 +116,11 @@ const contactUsList = [
     grid-template-columns: 33% calc(67% - 4rem);
     grid-gap: 4rem;
     padding: 3rem 0rem;
+
+    @media only screen and (orientation: portrait) {
+      display: flex;
+      flex-direction: column;
+    }
     h2 {
       font-weight: bolder;
       text-align: left !important;
@@ -105,6 +132,10 @@ const contactUsList = [
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
     margin: 3rem 0rem;
+
+    @media only screen and (orientation: portrait) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     &-box {
       font-size: 0.7rem;
@@ -161,6 +192,9 @@ const contactUsList = [
       margin: 0 auto;
       padding: 4rem;
       border-radius: 0.7rem;
+      @media only screen and (orientation: portrait) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
     &-form {
       h3 {

@@ -12,16 +12,28 @@
         </p>
         <div class="form-group">
           <i class="fa-solid fa-envelope"></i>
-          <input type="email" placeholder="Enter Your Email..." class="form-control" />
-          <button class="btn btn-primary">Subscribe</button>
+          <input
+            type="email"
+            placeholder="Enter Your Email..."
+            class="form-control"
+          />
+          <button class="btn btn-primary">
+            <span v-if="btn">Subscribe</span>
+            <i v-if="!btn" class="fa-solid fa-check"></i>
+          </button>
         </div>
       </form>
     </div>
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+const btn = ref("true");
+onMounted(() => {
+  if (window.innerHeight > window.innerWidth) {
+    btn.value = !btn.value;
+  }
+});
 </script>
 
 <style lang="scss">
@@ -54,6 +66,9 @@ export default {};
   }
   .form {
     width: 70%;
+    @media only screen and (orientation: portrait) {
+      width: 95%;
+    }
     h2 {
       font-size: 4rem;
       span {
@@ -96,6 +111,10 @@ export default {};
         border-radius: 4rem;
         background-color: $purple;
         border-color: $purple;
+
+        @media only screen and (orientation: portrait) {
+          width: 5rem;
+        }
       }
     }
   }

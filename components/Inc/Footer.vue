@@ -5,12 +5,17 @@
         <h4>STAY UP TO DATE ON OUR LATEST TIPS</h4>
         <p>
           Subscrible & get
-          <span>10%</span> discount. Get E-mail updates about our latest shop and
+          <span>10%</span> discount. Get E-mail updates about our latest shop
+          and
           <nuxt-link to="/">special offers.</nuxt-link>
         </p>
         <form action="#" class="form">
           <div class="form-group">
-            <input type="email" placeholder="Enter your email..." class="form-control" />
+            <input
+              type="email"
+              placeholder="Enter your email..."
+              class="form-control"
+            />
             <i class="fa-solid fa-envelope-circle-check"></i>
           </div>
         </form>
@@ -78,6 +83,10 @@ export default {};
     display: grid;
     grid-template-columns: 40% 1fr;
     grid-gap: 4rem;
+
+    @media only screen and (orientation: portrait) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &-left {
@@ -113,6 +122,10 @@ export default {};
   &-right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    @media only screen and (orientation: portrait) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     h5 {
       padding-bottom: 2rem;
       font-size: 1.6rem;

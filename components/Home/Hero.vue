@@ -46,6 +46,10 @@ onMounted(() => {
       // height: 50rem;
       object-position: center;
       object-fit: cover;
+
+      @media only screen and (orientation: portrait) {
+        height: 50rem;
+      }
     }
   }
 }

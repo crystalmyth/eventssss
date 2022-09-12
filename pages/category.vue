@@ -80,11 +80,19 @@ function onFilterClick(value) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media only screen and (orientation: portrait) {
+    flex-direction: column;
+  }
   &-left {
     display: flex;
     align-items: center;
     grid-gap: 2rem;
     width: 40%;
+
+    @media only screen and (orientation: portrait) {
+      width: 100%;
+      justify-content: space-between;
+    }
     label {
       cursor: pointer;
     }

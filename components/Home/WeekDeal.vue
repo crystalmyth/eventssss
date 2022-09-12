@@ -22,8 +22,7 @@
   </section>
 </template>
 
-<script setup>
-</script>
+<script setup></script>
 
 <style lang="scss">
 .week-deal {
@@ -40,8 +39,16 @@
     overflow: hidden;
     width: 33.3%;
     transform: scale(0.97);
+
+    @media only screen and (orientation: portrait) {
+      width: 50%;
+    }
     &:nth-last-child(1) {
       width: 50%;
+
+      @media only screen and (orientation: portrait) {
+        width: 100%;
+      }
     }
     &:nth-last-child(2) {
       width: 50%;

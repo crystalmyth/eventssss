@@ -20,6 +20,10 @@
         left: 0;
         overflow-y: auto;
 
+        @media only screen and (orientation: portrait) {
+            width: 100%;
+        }
+
         h2 {
             font-size: 2rem;
             padding-top: 2rem;

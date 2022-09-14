@@ -47,11 +47,11 @@
 <script setup>
 import data from "~/assets/data/web-profile";
 import $ from "jquery";
-
+import Logo from "@/assets/images/logo.svg";
 // const data = await useFetch("http://3.111.70.214:1337/web-profile");
 // const profile = data.data._rawValue;
 const profile = data;
-const Logo = `http://3.111.70.214:1337${profile.Logo.url}`;
+// const Logo = `http://3.111.70.214:1337${profile.Logo.url}`;
 
 const menu = [
   { name: "Home", link: "/" },

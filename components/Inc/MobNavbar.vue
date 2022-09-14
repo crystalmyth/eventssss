@@ -2,11 +2,7 @@
   <div v-if="show" id="mob-navbar" class="mob-navbar">
     <div class="container-fluid">
       <div class="mob-navbar-logo">
-        <img
-          src="http://demo2.themelexus.com/ziggy/wp-content/uploads/2022/05/logo.svg"
-          alt=""
-          class="img-fluid"
-        />
+        <img :src="Logo" alt="" class="img-fluid" />
       </div>
       <div class="mob-navbar-menu" @click="TriggerMobNav">
         <i class="fa-solid fa-bars" v-if="!display"></i>
@@ -19,6 +15,7 @@
 </template>
 
 <script setup>
+import Logo from "@/assets/images/logo.svg";
 const display = ref(false);
 const show = ref(false);
 

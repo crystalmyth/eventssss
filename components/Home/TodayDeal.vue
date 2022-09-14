@@ -6,12 +6,7 @@
         <carousel :items-to-show="1">
           <slide v-for="slide in 10" :key="slide">
             <div class="today-deal-list-box">
-              <img
-                lazy="loading"
-                src="http://demo2.themelexus.com/ziggy/wp-content/uploads/2022/05/product-19-1-350x350.jpg"
-                alt
-                class="img-fluid"
-              />
+              <img lazy="loading" :src="ProductImage" alt class="img-fluid" />
               <div class="today-deal-list-box-content">
                 <h4 class="today-deal-list-box-content-title">Title</h4>
                 <div class="today-deal-list-box-content-price">
@@ -81,6 +76,7 @@
 <script setup>
 import "vue3-carousel/dist/carousel.css";
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import ProductImage from "@/assets/images/product.jpeg";
 </script>
 
 <style lang="scss">

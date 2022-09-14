@@ -1,5 +1,5 @@
 <template>
-  <div id="mob-navbar" class="mob-navbar">
+  <div v-if="show" id="mob-navbar" class="mob-navbar">
     <div class="container-fluid">
       <div class="mob-navbar-logo">
         <img
@@ -20,10 +20,17 @@
 
 <script setup>
 const display = ref(false);
+const show = ref(false);
 
 function TriggerMobNav() {
   display.value = !display.value;
 }
+
+onMounted(() => {
+  if (window.innerHeight > window.innerWidth) {
+    show.value = true;
+  }
+});
 </script>
 
 <style lang="scss">

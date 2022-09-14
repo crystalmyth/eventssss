@@ -39,7 +39,7 @@
     "ext": ".png",
     "mime": "image/png",
     "size": 16.69,
-    "url": "/uploads/ZDF_logo_Logo_2021_svg_d920ea9d19.png",
+    "url": "@/assets/images/logo.svg",
     "previewUrl": null,
     "provider": "local",
     "provider_metadata": null,

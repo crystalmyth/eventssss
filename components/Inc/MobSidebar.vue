@@ -1,5 +1,5 @@
 <template>
-  <main id="mob-sidebar" class="mob-sidebar" :class="[display ? '' : 'd-none']">
+  <main id="mob-sidebar" class="mob-sidebar" :class="[display ? 'active' : '']">
     <div class="container-fluid">
       <div class="mob-sidebar-links">
         <nuxt-link @click="$emit('display', !display)" to="/">Home</nuxt-link>
@@ -50,14 +50,19 @@ const props = defineProps({
 .mob-sidebar {
   position: fixed;
   z-index: -1;
-  top: 0rem;
+  bottom: 0rem;
   left: 0;
-  height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: $white;
+  background: rgba($white, 0.65);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba($white, 0.18);
   width: 100%;
-  padding-top: 5rem;
+  min-height: 50%;
+  transform: translateY(100%);
   .container-fluid {
     display: flex;
     flex-direction: column;
@@ -69,6 +74,7 @@ const props = defineProps({
       padding: 0.5rem 0rem;
       color: $purple;
       font-weight: bold;
+      letter-spacing: 0.1rem;
     }
   }
 
@@ -123,5 +129,9 @@ const props = defineProps({
     padding: 0.5rem 1rem;
     border-radius: 3rem;
   }
+}
+
+.mob-sidebar.active {
+  transform: translateY(0%);
 }
 </style>
